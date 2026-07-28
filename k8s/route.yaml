@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: techchat-route
+spec:
+  to:
+    kind: Service
+    name: techchat-service
+  port:
+    targetPort: 8080

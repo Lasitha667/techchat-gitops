@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: techchat-deployment
+  labels:
+    app: techchat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: techchat
+  template:
+    metadata:
+      labels:
+        app: techchat
+    spec:
+      containers:
+      - name: techchat-container
+        # Replace with your Docker Hub username
+        image: docker.io/your-dockerhub-username/techchat-app:latest
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
