@@ -17,7 +17,7 @@ spec:
       containers:
       - name: techchat-container
         # Update this exact line:
-        image: docker.io/lasitha667/travel_guide_devops-backend:latest
+        image: docker.io/lasitha667/travel_guide_devops-frontend:latest
         ports:
         - containerPort: 8080
         resources:
