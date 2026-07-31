@@ -18,7 +18,10 @@ spec:
       - name: techchat-container
         image: docker.io/lasitha667/travel_guide_devops-backend:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
+        env:
+        - name: SPRING_DATA_MONGODB_URI
+          value: "mongodb://mongodb:27017/tour"
         resources:
           requests:
             memory: "256Mi"
