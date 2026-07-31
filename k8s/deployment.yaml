@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: techchat-container
-        # Replace with your Docker Hub username
-        image: docker.io/your-dockerhub-username/techchat-app:latest
+        # Update this exact line:
+        image: docker.io/lasitha667/techchat-app:latest
         ports:
         - containerPort: 8080
         resources:
