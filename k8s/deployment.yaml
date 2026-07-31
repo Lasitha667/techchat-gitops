@@ -16,10 +16,16 @@ spec:
     spec:
       containers:
       - name: techchat-container
-        # Replace with your Docker Hub username
-        image: docker.io/your-dockerhub-username/techchat-app:latest
+        image: docker.io/lasitha667/travel_guide_devops-backend:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
+        env:
+        - name: SPRING_DATA_MONGODB_URI
+          value: "mongodb://mongodb:27017/techchat"
+        - name: SPRING_SECURITY_USER_NAME
+          value: "admin"
+        - name: SPRING_SECURITY_USER_PASSWORD
+          value: "admin"
         resources:
           requests:
             memory: "256Mi"
